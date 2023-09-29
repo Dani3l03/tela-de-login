@@ -1,0 +1,153 @@
+html{
+  overflow: hidden;
+  margin-left: 10px;
+ }
+
+body {
+    background: #191816;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+
+  }
+  
+  .tela {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  img.logo {
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+  }
+
+  .camping{
+    background: url("/login img/side-image-2x.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    width: 1060px;
+    height: 1080px;
+    object-fit: cover;
+  }
+  
+  .center {
+    grid-column: 1;
+    border-radius: 4px;
+    background: #24221f;
+    margin: 194px 84px 194px 74px;
+    padding: 4rem 6rem;
+    position: relative;
+    width: 572px;
+    height: 512px;
+    align-self: center;
+  }
+
+  h1 {
+    color: #d4ccb6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+  }
+
+  h1::before{
+    content: url("/login img/log-in.svg");
+  }
+  
+  p {
+    color: #afb6c2;
+    font-size: 14px;
+  }
+  
+  p.registro {
+    color: #ffc632;
+    font-size: 14px;
+  }
+  
+  strong {
+    color: #ffc632;
+    font-size: 14px;
+  }
+
+  label{
+    color: #AFB6C2;
+    font-size: 16px;
+    display: block;
+    padding: 10px  0px 10px;
+  }
+
+  .password input,
+  .e-mail input{
+    border:solid 1px #868686;
+    border-radius: 4px;
+    background: #24221f;
+    width: 335px;
+    height: 44px;
+    color: #AFB6C2;
+    font-size: 18px;
+  }
+
+  input[for=label]::before{
+    content: url("/login img/mail.svg");
+  }
+
+  button{
+    color: #191816;
+    background: #FFC632;
+    border: #ffc632;
+    border-radius: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 24px;
+    justify-content: center;
+    display: flex;
+    width: 340px;
+    cursor: pointer;
+  }
+
+  .forget{
+    display: flex;
+  }
+  
+  input[type=checkbox]{
+    color: #24221f;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #868686;
+    margin-top: 8px;
+  }
+  .esqueci{
+    margin-left: 60px;
+    padding: 10px;
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+    color: #FFC632;
+    font-weight: 600;
+  }
+
+  button:hover{
+      background: #fcb90f;
+  }
+
+  .password input:hover{
+     outline: solid 1px #FFC632;
+     border: solid 1px #fcb90f;
+     
+  }
+
+  .e-mail input:hover{
+    outline: solid 1px #FFC632;
+    border: solid 1px #fcb90f;
+    
+ }
+
+ ::placeholder{
+  color: #A9AFB9;
+  font-size: 18px;
+ }
+
+ 
