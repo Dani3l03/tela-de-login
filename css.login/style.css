@@ -3,17 +3,17 @@ html{
   margin-left: 10px;
  }
 
-body {
+body{
     background: #191816;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1200px;
-
   }
   
   .tela {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 120px;
   }
   
   img.logo {
@@ -32,35 +32,44 @@ body {
   }
   
   .center {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
     grid-column: 1;
     border-radius: 4px;
     background: #24221f;
-    margin: 194px 84px 194px 74px;
-    padding: 4rem 6rem;
+    margin: 198px 84px 194px 184px;
     position: relative;
-    width: 572px;
+    width: 562px;
     height: 512px;
-    align-self: center;
+    place-content: center;
   }
 
   h1 {
     color: #d4ccb6;
+    font-size: 26px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+    padding: 0px 0px 5px 130px;
+    display: flex;
   }
 
   h1::before{
     content: url("/login img/log-in.svg");
+    margin-right: 5px;
   }
   
   p {
     color: #afb6c2;
-    font-size: 14px;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px 0px 5px 120px;
   }
   
   p.registro {
     color: #ffc632;
     font-size: 14px;
+    padding: 0px 0px 5px 168px;
   }
   
   strong {
@@ -74,20 +83,37 @@ body {
     display: block;
     padding: 10px  0px 10px;
   }
-
-  .password input,
   .e-mail input{
     border:solid 1px #868686;
     border-radius: 4px;
     background: #24221f;
-    width: 335px;
-    height: 44px;
+    padding: 14px 88px 14px 28px;
     color: #AFB6C2;
     font-size: 18px;
+    position: relative;
+    background-image: url("/login img/mail.svg");
+    background-repeat: no-repeat;
+    background-position: top 14px left 6px;
   }
 
-  input[for=label]::before{
-    content: url("/login img/mail.svg");
+  .password input{
+    border:solid 1px #868686;
+    border-radius: 4px;
+    background: #24221f;
+    padding: 14px 88px 14px 28px;
+    color: #AFB6C2;
+    font-size: 18px;
+    position: relative;
+    background-image: url("/login img/lock.svg"), url("/login img/eye.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 14px left 6px, top 14px right 10px;
+  }
+
+  .e-mail{
+    padding: 20px 0px 5px 110px;
+  } 
+  .password{
+    padding: 0px 0px 5px 110px;
   }
 
   button{
@@ -103,51 +129,78 @@ body {
     display: flex;
     width: 340px;
     cursor: pointer;
+    margin: 0px 0px 18px 110px;
   }
-
   .forget{
     display: flex;
+    padding: 0px 0px 10px 110px;
   }
-  
+
   input[type=checkbox]{
-    color: #24221f;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    border: 1px solid #868686;
     margin-top: 8px;
+    margin-right: 10px;
   }
   .esqueci{
     margin-left: 60px;
     padding: 10px;
   }
-
   a{
     display: block;
     text-decoration: none;
     color: #FFC632;
     font-weight: 600;
   }
-
   button:hover{
-      background: #fcb90f;
+    background: #fcb90f;
   }
-
   .password input:hover{
-     outline: solid 1px #FFC632;
-     border: solid 1px #fcb90f;
-     
+    outline: solid 1px #FFC632;
+    border: solid 1px #fcb90f;
+    background-image: url("/login img/lock-focus.svg"), url("/login img/eye.svg");
+    background-repeat: no-repeat, no-repeat;
+    
   }
-
   .e-mail input:hover{
     outline: solid 1px #FFC632;
     border: solid 1px #fcb90f;
-    
+    background-image: url("/login img/mail-focus.svg");
+    background-repeat: no-repeat;
  }
 
  ::placeholder{
   color: #A9AFB9;
   font-size: 18px;
+  padding-left: 8px;
  }
 
- 
+ input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: -2px;
+  background-color:#24221f;
+  border: 1px solid #868686;
+  border-radius: 4px;
+}
+
+input[type=checkbox]:checked::after{
+  content: "";
+  display: block;
+  background-image: url("/login img/check.svg");
+  background-color: #fcb90f;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: -2px;
+  position: absolute;
+  border-radius: 4px;
+  border: 1px solid #fcb90f
+}
